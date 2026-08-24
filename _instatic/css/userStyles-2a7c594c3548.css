@@ -52,3 +52,11 @@ body {
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
+
+/* Link Instagram in fondo all'About. */
+.about-social-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
