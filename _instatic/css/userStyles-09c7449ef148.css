@@ -1,0 +1,54 @@
+/* src/styles/base.css */
+/* Impianto strutturale + stati applicati a runtime dagli script.
+   Il pannello Stili va bene per tutto il resto, ma NON per le regole qui sotto:
+   in fase di pubblicazione Instatic scarta i selettori che non trova nel markup
+   statico, quindi :hover, .is-active e .is-open verrebbero cancellati dal foglio
+   pubblicato. Questo file invece viene pubblicato testualmente.
+   Regola pratica: se una classe viene aggiunta da JavaScript, la sua regola sta qui.
+   Attenzione: questo file viene caricato DOPO il pannello, quindi ciò che scrivi
+   qui vince sulle modifiche fatte da destra. */
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* I wrapper del loop non devono creare celle proprie:
+   le foto devono cadere direttamente nella griglia. */
+.week,
+.week-item,
+.week-photos {
+  display: contents;
+}
+
+/* Etichette tecniche lette dallo script dei filtri, mai visibili. */
+.wk-year,
+.wk-month,
+.wk-days {
+  display: none;
+}
+
+/* Filtri: sottolineatura al passaggio del mouse e sullo stato selezionato. */
+.site-filters .filter-btn:hover,
+.site-filters .filter-btn.is-active {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* About: overlay aperto e voce di menu evidenziata. */
+.about-overlay.is-open {
+  display: block;
+}
+
+.site-header .site-about-link:hover,
+.site-header .site-about-link.is-active {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
