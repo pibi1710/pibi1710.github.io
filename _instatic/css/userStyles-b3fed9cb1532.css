@@ -40,6 +40,11 @@ body {
   text-underline-offset: 2px;
 }
 
+/* Mesi/anni senza nemmeno una settimana pubblicata: testo sbiadito. */
+.site-filters .filter-btn.is-empty {
+  opacity: 0.5;
+}
+
 /* About: overlay aperto e voce di menu evidenziata. */
 .about-overlay.is-open {
   display: block;

@@ -47,6 +47,16 @@
       daysBox.appendChild(a);
     });
   }
+  function markEmpty(box, key) {
+    if (!box) return;
+    box.querySelectorAll(".filter-btn").forEach(function(btn) {
+      var value = btn.getAttribute("data-value");
+      var has = weeks.some(function(w) {
+        return w[key] === value && matches(w, key);
+      });
+      btn.classList.toggle("is-empty", !has);
+    });
+  }
   function apply() {
     weeks.forEach(function(w) {
       w.el.style.display = matches(w) ? "" : "none";
@@ -55,6 +65,8 @@
     syncActive(yearsBox, state.year);
     syncActive(monthsBox, state.month);
     syncActive(daysBox, state.days);
+    markEmpty(yearsBox, "year");
+    markEmpty(monthsBox, "month");
     if (monthsBox) monthsBox.style.display = state.year ? "" : "none";
     if (daysBox) daysBox.style.display = state.month ? "" : "none";
   }
