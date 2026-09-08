@@ -4,9 +4,9 @@
   var weeks = weekItems.map(function(el) {
     return {
       el,
-      year: (el.querySelector(".wk-year") || {}).textContent || "",
-      month: (el.querySelector(".wk-month") || {}).textContent || "",
-      days: (el.querySelector(".wk-days") || {}).textContent || ""
+      year: el.dataset.year || "",
+      month: el.dataset.month || "",
+      days: el.dataset.days || ""
     };
   });
   var state = { year: null, month: null, days: null };

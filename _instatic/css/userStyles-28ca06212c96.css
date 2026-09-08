@@ -23,13 +23,6 @@ body {
   display: contents;
 }
 
-/* Etichette tecniche lette dallo script dei filtri, mai visibili. */
-.wk-year,
-.wk-month,
-.wk-days {
-  display: none;
-}
-
 /* Filtri: sottolineatura al passaggio del mouse e sullo stato selezionato. */
 .site-filters .filter-btn:hover,
 .site-filters .filter-btn.is-active {
