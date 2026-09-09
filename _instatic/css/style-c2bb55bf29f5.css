@@ -249,3 +249,61 @@ body {
   text-decoration-style: solid;
   text-decoration-thickness: auto;
 }
+
+.notfound-logo {
+  width: auto;
+  height: 20px;
+}
+
+.notfound-code {
+  font-size: 140px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin: 0px;
+}
+
+@media (max-width: 700px) {
+  .notfound-code {
+  font-size: 88px;
+  }
+}
+
+.notfound-message {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-body);
+  max-width: 360px;
+  margin: 0px;
+}
+
+.notfound-home {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-title);
+  text-decoration-color: currentcolor;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+}
+
+.notfound-page {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 40px;
+  column-gap: 40px;
+  text-align: center;
+  padding: 32px;
+}
+
+.notfound-home:hover {
+  text-decoration-color: currentcolor;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+}
