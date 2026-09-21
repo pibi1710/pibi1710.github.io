@@ -1,0 +1,24 @@
+/* src/styles/base.css */
+/* Impianto strutturale del sito: regole che devono esistere sempre, a
+   prescindere da cosa fa il pannello Stili.
+   Dalla 0.0.20 in poi Instatic conserva anche le classi che uno script
+   aggiunge a runtime (is-active, is-empty, is-open sono tutte nel pannello
+   Stili normale, non qui). Questo file resta il posto giusto solo per le
+   regole strutturali di base.
+   Attenzione: questo file viene caricato DOPO il pannello, quindi ciò che
+   scrivi qui vince sulle modifiche fatte da destra. */
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-body);
+  font-family: var(--font-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* I wrapper del loop non devono creare celle proprie:
+   le foto devono cadere direttamente nella griglia. */
+.week,
+.week-item,
+.week-photos {
+  display: contents;
+}

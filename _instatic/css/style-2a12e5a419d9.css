@@ -155,6 +155,14 @@
   }
 }
 
+.filter-btn.is-active {
+  color: var(--text-title);
+  text-decoration-line: underline;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+}
+
 body {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -185,6 +193,14 @@ body {
   font-style: italic;
   font-size: 13px;
   color: var(--text-body);
+}
+
+.filter-btn:hover {
+  color: var(--text-title);
+  text-decoration-line: underline;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
 }
 
 .about-lead {
@@ -226,6 +242,17 @@ body {
   z-index: 50;
   display: none;
   overflow-y: auto;
+}
+
+.about-overlay.is-open {
+  display: block;
+}
+
+.site-about-link.is-active {
+  text-decoration-line: underline;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .about-social-link {
@@ -306,4 +333,42 @@ body {
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-thickness: auto;
+}
+
+.site-filters .filter-btn:hover {
+  color: rgb(255, 255, 255);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.site-filters .filter-btn.is-active {
+  color: rgb(255, 255, 255);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.site-filters .filter-btn.is-empty {
+  opacity: 0.5;
+}
+
+.site-header .site-about-link:hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.site-header .site-about-link.is-active {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
