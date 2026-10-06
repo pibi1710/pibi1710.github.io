@@ -30,7 +30,7 @@
     if (!daysBox) return;
     daysBox.innerHTML = "";
     var seen = {};
-    weeks.forEach(function(w) {
+    weeks.slice().reverse().forEach(function(w) {
       if (!matches(w, "days")) return;
       if (seen[w.days]) return;
       seen[w.days] = true;
