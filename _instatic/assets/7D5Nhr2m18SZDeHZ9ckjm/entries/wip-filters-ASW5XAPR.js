@@ -91,4 +91,15 @@
   wireStaticButtons(yearsBox, "year");
   wireStaticButtons(monthsBox, "month");
   apply();
+  var scrollTop = document.querySelector(".scroll-top");
+  if (scrollTop) {
+    var toggleScrollTop = function() {
+      scrollTop.classList.toggle("is-visible", window.scrollY > window.innerHeight);
+    };
+    window.addEventListener("scroll", toggleScrollTop, { passive: true });
+    toggleScrollTop();
+    scrollTop.addEventListener("click", function() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 })();
