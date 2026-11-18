@@ -49,7 +49,7 @@
 
 :root.theme-alt .theme-inverted,
 :root.theme-alt .theme-always-default,
-:root.theme-default .theme-inverted .theme-always-default {
+:root:not(.theme-alt) .theme-inverted .theme-always-default {
   --primary: hsla(0, 0%, 100%, 1);
   --bg-body: hsla(0, 0%, 0%, 1);
   --bg-surface: hsla(0, 0%, 0%, 1);
@@ -59,8 +59,8 @@
 }
 
 :root.theme-alt,
-:root.theme-default .theme-inverted,
-:root.theme-default .theme-always-alt,
+:root:not(.theme-alt) .theme-inverted,
+:root:not(.theme-alt) .theme-always-alt,
 :root.theme-alt .theme-inverted .theme-always-alt {
   --bg-body: hsla(0, 0%, 0%, 1);
   --bg-surface: hsla(0, 0%, 0%, 1);
